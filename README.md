@@ -13,6 +13,50 @@ Everyday developer utilities that run **100% in your browser** — no backend, n
 
 Also: command palette (`Ctrl/⌘ K`), favorites + recents, light/dark/system theme, responsive layout, per-tool persisted state.
 
+## Screenshots
+
+### Home
+
+The landing page lists every tool as a card, with a **Recently used** section for quick access and a search box (`Ctrl/⌘ K`) to jump to any tool. The sidebar is generated from the same tool registry, so it always stays in sync.
+
+![Home page](docs/screenshots/home.png)
+
+### JSON Formatter
+
+Paste minified JSON and get a pretty-printed result instantly. Choose the indent size, toggle **Sort keys** to alphabetize every object, and see a validity badge (or the exact line and column of a syntax error).
+
+![JSON Formatter](docs/screenshots/json.png)
+
+### Base64 & URL Encoder
+
+Encode or decode text as Base64, Base64URL or percent-encoded URL text. It is Unicode-safe, so accents, CJK characters and emoji round-trip correctly, and **Swap** moves the output back into the input.
+
+![Base64 & URL Encoder](docs/screenshots/base64.png)
+
+### Regex Tester
+
+Type a pattern, toggle flags (`g`, `i`, `m`, `s`, `u`) and see matches highlighted live in the test string. Each match lists its index plus numbered and named capture groups.
+
+![Regex Tester](docs/screenshots/regex.png)
+
+### JWT Decoder
+
+Paste a JSON Web Token to inspect its header, claims and signature. Timestamp claims such as `iat` and `exp` are shown as readable dates, with an expiry status badge. Decoding happens locally and the token is never stored.
+
+![JWT Decoder](docs/screenshots/jwt.png)
+
+### Color Converter
+
+Enter a HEX value or use the picker and HSL sliders to get matching HEX, RGB and HSL values with one-click copy. The WCAG panel shows contrast ratios against white and black text, with AA/AAA ratings.
+
+![Color Converter](docs/screenshots/color.png)
+
+### Hash Generator
+
+Generate SHA-1, SHA-256, SHA-384 and SHA-512 digests for text or a dropped file using the Web Crypto API. Paste an expected hash to get a **Match** badge, and switch the output to uppercase if needed.
+
+![Hash Generator](docs/screenshots/hash.png)
+
 ## Stack
 
 React 19 · TypeScript (strict) · Vite · Tailwind CSS v4 · Zustand · React Router · Vitest + Testing Library
