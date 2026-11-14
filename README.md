@@ -1,5 +1,11 @@
 # DevToolkit
 
+**Live demo:** https://devtoolkit.bilalgonen.workers.dev
+
+DevToolkit is a browser-based suite of six everyday developer utilities: a JSON formatter, a Base64/URL encoder, a regex tester, a JWT decoder, a color converter with WCAG contrast checks, and a SHA hash generator. Everything runs 100% client-side, so no data is ever uploaded. Built with React 19, strict TypeScript, Vite, Tailwind CSS v4, Zustand and React Router, it uses a registry-driven architecture with lazy-loaded tools, a reusable accessible UI kit, a command palette and light/dark themes. Core logic is framework-free and covered by Vitest unit and component tests. It's deployed on Cloudflare Workers.
+
+---
+
 Everyday developer utilities that run **100% in your browser** — no backend, no database, nothing uploaded.
 
 | Tool | Highlights |
