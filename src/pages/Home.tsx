@@ -27,6 +27,37 @@ function Section({ title, items }: { title: string; items: Tool[] }) {
   )
 }
 
+const LINKS = [
+  { label: 'Live demo', href: 'https://devtoolkit.bilalgonen.workers.dev' },
+  { label: 'Source', href: 'https://github.com/bilalgonen/dev-toolkit-react-typescript' },
+  { label: 'bilalgonen.com', href: 'https://bilalgonen.com' },
+]
+
+function About() {
+  return (
+    <section className="mt-10">
+      <h2 className="mb-3 text-sm font-semibold tracking-wide text-muted uppercase">About</h2>
+      <div className="rounded-xl border border-line bg-surface p-5">
+        <p className="max-w-3xl text-sm leading-relaxed text-muted">
+          <strong className="text-fg">DevToolkit</strong> is a browser-based suite of six everyday developer utilities: a JSON formatter, a Base64/URL encoder, a regex tester, a JWT decoder, a color
+          converter with WCAG contrast checks, and a SHA hash generator. Everything runs 100% client-side, so no data is ever uploaded. Built with React 19, strict TypeScript, Vite, Tailwind CSS v4,
+          Zustand and React Router, it uses a registry-driven architecture with lazy-loaded tools, a reusable accessible UI kit, a command palette and light/dark themes. Core logic is
+          framework-free and covered by Vitest unit and component tests. Deployed on Cloudflare Workers.
+        </p>
+        <ul className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium">
+          {LINKS.map((l) => (
+            <li key={l.href}>
+              <a href={l.href} target="_blank" rel="noreferrer" className="text-accent hover:underline">
+                {l.label} ↗
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  )
+}
+
 export default function Home() {
   const { favorites, recents } = useAppStore()
   const pick = (ids: string[]) => ids.map(findTool).filter((t): t is Tool => !!t)
@@ -43,6 +74,7 @@ export default function Home() {
       <Section title="Favorites" items={pick(favorites)} />
       <Section title="Recently used" items={pick(recents)} />
       <Section title="All tools" items={tools} />
+      <About />
     </>
   )
 }
