@@ -81,12 +81,12 @@ npm run build      # type-check + production build to dist/
 npm run preview    # serve the production build
 ```
 
-## Deploy to Cloudflare Pages
+## Deploy to Cloudflare Workers
 
-Connect the repo in the Cloudflare dashboard (Workers & Pages → Create → Pages) and use:
+Connect the repo in the Cloudflare dashboard (Workers & Pages → Create) and use:
 
 - **Build command:** `npm run build`
-- **Build output directory:** `dist`
+- **Deploy command:** `npx wrangler deploy`
 
-Or deploy directly: `npm run build && npx wrangler pages deploy dist`.
-`public/_redirects` provides SPA fallback so deep links like `/tools/jwt` work on refresh.
+Or deploy directly: `npm run build && npx wrangler deploy`.
+[`wrangler.jsonc`](wrangler.jsonc) serves `dist/` with `single-page-application` fallback, so deep links like `/tools/jwt` work on refresh.
